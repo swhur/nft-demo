@@ -1,0 +1,22 @@
+dependencies:
+  - OpenZeppelin/openzeppelin-contracts@4.6.0
+  - smartcontractkit/chainlink@1.4.0
+compiler:
+  solc:
+    remappings:
+      - "@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.6.0"
+      - "@chainlink=smartcontractkit/chainlink@1.4.0"
+dotenv: .env
+wallets:
+  from_key: ${PRIVATE_KEY}
+networks:
+  development:
+    keyhash: "0xd89b2bf150e3b9e13446986e571fb9cab24b13cea0a43ea20a6049a85cc807cc"
+    fee: 100000000000000000
+    subscription_id: 4106
+  rinkeby:
+    vrf_coordinator: "0x6168499c0cFfCaCD319c818142124B7A15E857ab"
+    link_token: "0x01BE23585060835E02B77ef475b0Cc51aA1e0709"
+    keyhash: "0xd89b2bf150e3b9e13446986e571fb9cab24b13cea0a43ea20a6049a85cc807cc"
+    fee: 100000000000000000 # 0.1
+    subscription_id: 4106
